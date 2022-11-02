@@ -1,0 +1,223 @@
+/* SCROLLER */
+/* .scroller {
+    scrollbar-width: thin;
+    scrollbar-color: #19a59f #22252c;
+    overflow-y: scroll;
+    margin-inline-start: 20px;
+} */
+
+.scroller::-webkit-scrollbar {
+    width: 16px;
+}
+
+.scroller::-webkit-scrollbar-track {
+    background: #253e01;
+    border-radius: 13px;
+}
+.scroller::-webkit-scrollbar-thumb {
+    background-color:rgb(204, 194, 3);
+    border-radius: 4px;
+    border: 1px solid #393737;
+}
+
+
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(3, 24, 2);
+    height: 100vh;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    font-size: 2rem;
+    margin-bottom: 2vh;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(204, 194, 3);
+}
+
+.search {
+    flex-basis: 40%;
+    flex-grow: 1;
+}
+
+.search-bar {
+    width: 250;
+    font-size: 1rem;
+}
+
+/* .modal-background{
+    background-color: rgba(138, 200, 167, 0.4);
+    position: fixed;
+    inset: 0;
+}
+
+.modal-body{
+    background-color:rgb(255, 255, 255) ;
+    height:40vh;
+    width:40vw;
+    position: absolute;
+    left: 30vw;
+    top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+} */
+
+
+
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+main {
+    flex-basis: 50%;
+}
+
+article{
+    border-radius: 4px;
+    box-shadow: 2px 3px 7px  rgba(255, 255, 255, 0.511) ;
+}
+
+aside {
+    flex-basis: 50%;
+    height: 85vh;
+    overflow: auto;
+    justify-content: space-between;
+}
+
+.video-links>* {
+    background-color: rgb(252, 234, 213);
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    margin-inline-end: 10px;
+
+}
+
+.video-links :last-child {
+    margin-bottom: 0;
+}
+
+.video-container {
+    height: 43vh;
+    width: calc((420/345)*43vh);
+    margin: 0 auto 2vh;
+
+}
+
+.video-player{
+    border-radius: 5px;
+}
+
+.wiki-links {
+    height: 40vh;
+    overflow: auto;
+}
+
+.wiki-links>* {
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 5px 1rem 1rem;
+    margin-bottom: 20px;
+    margin-inline-end: 10px;
+    line-height: 1.58;
+
+}
+
+.wiki-links :last-child {
+    margin-bottom: 0;
+}
+
+.wiki-links p {
+    font-size: .875rem;
+    color: #4d5156;
+}
+
+
+.wiki-links a {
+    font-size: 1.25rem;
+    margin-bottom: .4rem;
+    display: block;
+    text-decoration: none;
+}
+
+.wiki-links a:hover {
+    text-decoration: underline;
+}
+
+
+.wiki-links p {
+    margin: 0;
+}
+
+.searchmatch {
+    font-weight: bold;
+}
+
+@media (max-width:640px) {
+    .video-links>* {
+        flex-direction: column;
+    }
+
+    .video-links h4 {
+        margin-top: 0;
+    }
+
+    aside {
+        flex-basis: 180px;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+}
+
+@media (max-width:510px) {
+    header {
+        flex-direction: column;
+        height: 17vh;
+    }
+
+    .main-container {
+        flex-direction: column-reverse;
+    }
+
+    .video-container {
+        height: 28vh;
+        width: calc((420/345)*28vh);
+    }
+
+    .video-links {
+        flex-basis: 23vh;
+    }
+
+    .wiki-links {
+        height: 23vh;
+    }
+
+
+
+
+}

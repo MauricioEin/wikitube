@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikitube</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+
+    <header>
+        <div class="logo">wikitube</div>
+        <div class="header-not-logo">
+            <form class="search">
+                <input type="search" class="search-bar">
+                <input type="submit" value="Search">
+
+            </form>
+            <!-- <iconify-icon icon="carbon:color-palette" onclick="onChangeColor()"></iconify-icon> -->
+        </div>
+
+    </header>
+
+    <section class="main-container">
+
+        <aside class="video-links scroller">
+
+        </aside>
+
+        <main>
+            <div class="video-container">
+                <iframe class="video-player" width="420" height="345" src="">
+                </iframe>
+            </div>
+            <div class="wiki-links scroller"></div>
+        </main>
+    </section>
+
+    <!-- <section class="modal">
+        <div class="modal-background">
+            <div class="modal-body">
+                <h3> change background color</h3>
+                <form class="pick-color">
+                    <input type="color" name="" id="" oninput="onChangeBGC(this.value)">
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </section> -->
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/wikitube-controller.js"></script>
+    <script src="js/wikitube-service.js"></script>
+</body>
+
+</html>
